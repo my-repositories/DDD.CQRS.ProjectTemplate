@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates/**/*" Exclude="templates/**/.DS_Store;templates/**/.idea/**;templates/**/bin/**;templates/**/obj/**" />
+    <Content Include="templates/**/*" Exclude="templates/**/.DS_Store;templates/**/.idea/**;templates/**/bin/**;templates/**/obj/**;templates/ddd.cqrs/src/_CompanyName.ProjectName.sln" />
     <Compile Remove="**/*" />
   </ItemGroup>
 </Project>
