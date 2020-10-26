@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DDD.CQRS.ProjectTemplate</id>
+    <version>1.0.0</version>
+    <description>
+      Template to use when creating an .NET Core application.
+    </description>
+    <authors>Aleksandr Loktionov</authors>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <license type="file">LICENSE</license>
+    <dependencies>
+      <group targetFramework="netcoreapp3.1" />
+    </dependencies>
+  </metadata>
+</package>

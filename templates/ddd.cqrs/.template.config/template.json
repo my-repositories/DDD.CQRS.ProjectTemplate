@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Aleksandr Loktionov",
+    "classifications": [ "Common" ],
+    "identity": "DDD.CQRS.ProjectTemplate",
+    "name": "DDD CQRS ProjectTemplate",
+    "shortName": "ddd.cqrs",
+    "symbols": {
+        "includeTest": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false"
+        },
+        "projectName": {
+            "type": "parameter",
+            "replaces": "CompanyName.ProjectName",
+            "FileRename": "CompanyName.ProjectName",
+            "defaultValue": "CompanyName.ProjectName"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(!includeTest)",
+                    "exclude": ["src/CompanyName.ProjectName.UnitTests/**/*"]
+                }
+            ]
+        }
+    ]
+}

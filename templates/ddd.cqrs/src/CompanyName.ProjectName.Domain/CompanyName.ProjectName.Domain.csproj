@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CodeAnalysisRuleSet>../../tools/CompanyName.ProjectName.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DDD.CQRS.Domain" Version="1.0.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\tools\stylecop.json" />
+  </ItemGroup>
+</Project>
