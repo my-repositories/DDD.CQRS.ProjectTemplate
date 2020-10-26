@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <RepositoryUrl>https://github.com/my-repositories/DDD.CQRS.ProjectTemplate</RepositoryUrl>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageId>DDD.CQRS.ProjectTemplate</PackageId>

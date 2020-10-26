@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          dotnet pack -c Release
+
+      - name: Push GH-Packages
+        run: |
+          dotnet nuget add source https://nuget.pkg.github.com/my-repositories/index.json -n github -u my-repositories -p GH_TOKEN --store-password-in-clear-text
+          dotnet nuget push "bin/Release/DDD.CQRS.ProjectTemplate.1.0.0.nupkg" -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/my-repositories/index.json --skip-duplicate --no-symbols 1
